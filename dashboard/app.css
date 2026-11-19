@@ -88,9 +88,21 @@ table.board { width: 100%; border-collapse: collapse; background: var(--card); b
 ol.plan { margin: 8px 0; padding-left: 22px; }
 ol.plan li { margin-bottom: 8px; }
 .foot { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 14px; }
+.topten { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px 8px; margin: 0 0 12px; }
+.topten-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+.topten-head h2 { margin: 0; font-size: 14px; }
+.topten-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.topten-row { display: flex; align-items: baseline; gap: 8px; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 2px; font: inherit; font-size: 13.5px; line-height: 1.45; cursor: pointer; color: inherit; }
+.topten-row:hover { background: #f6f2e8; }
+.topten-row:last-child { border-bottom: 0; }
+.topten-rank { font: 600 12px var(--mono); color: var(--muted); flex: none; width: 26px; }
+.topten-name { font-weight: 600; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topten-tvl { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+.topten-iv { font-weight: 700; color: var(--accent); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .method p { max-width: 760px; }
 @media (max-width: 760px) {
   .spot { grid-template-columns: 1fr; }
+  .topten-grid { grid-template-columns: 1fr; }
   h1 { font-size: 26px; }
   .bar-label { width: 110px; }
 }
